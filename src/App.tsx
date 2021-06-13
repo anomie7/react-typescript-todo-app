@@ -1,10 +1,13 @@
 import React, { FunctionComponent } from 'react';
 import './App.css';
 import TodoTemplate from './components/TodoTemplate';
+import TodoInsert from './components/TodoInsert';
 
 const App: FunctionComponent = () => {
   return (
-    <TodoTemplate>Todo App을 만들자!</TodoTemplate>
+    <TodoTemplate>
+      <TodoInsert/>
+    </TodoTemplate>
   )
 }
 
