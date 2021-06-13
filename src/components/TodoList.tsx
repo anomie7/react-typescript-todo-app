@@ -1,11 +1,16 @@
+import { Todo } from '../App';
 import TodoListItem from './TodoListItem';
 
-const TodoList = () => {
+interface Prop {
+  todos: Todo[];
+}
+
+const TodoList = ({ todos }: Prop) => {
   return (
     <div className="TodoList">
-      <TodoListItem />
-      <TodoListItem />
-      <TodoListItem />
+      {todos.map((todo) => (
+        <TodoListItem todo={todo} key={todo.id} />
+      ))}
     </div>
   );
 };
