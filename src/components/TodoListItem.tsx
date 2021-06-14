@@ -9,10 +9,11 @@ import './TodoListItem.scss';
 
 interface Props {
   todo: Todo;
+  onRemove: (id: number) => void;
 }
 
-const TodoListItem = ({ todo }: Props) => {
-  const { text, checked } = todo;
+const TodoListItem = ({ todo, onRemove }: Props) => {
+  const { id, text, checked } = todo;
 
   return (
     <div className="TodoListItem">
@@ -20,7 +21,7 @@ const TodoListItem = ({ todo }: Props) => {
         {checked ? <MdCheckBox /> : <MdCheckBoxOutlineBlank />}
         <div className="text">{text}</div>
       </div>
-      <div className="remove">
+      <div className="remove" onClick={() => onRemove(id)}>
         <MdRemoveCircleOutline />
       </div>
     </div>
