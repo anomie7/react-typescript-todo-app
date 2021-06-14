@@ -1,11 +1,11 @@
 import { Todo } from '../App';
 import TodoListItem from './TodoListItem';
 
-interface Prop {
+interface Props {
   todos: Todo[];
 }
 
-const TodoList = ({ todos }: Prop) => {
+const TodoList = ({ todos }: Props) => {
   return (
     <div className="TodoList">
       {todos.map((todo) => (

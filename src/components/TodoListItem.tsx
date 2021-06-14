@@ -7,11 +7,11 @@ import { Todo } from '../App';
 import cn from 'classnames';
 import './TodoListItem.scss';
 
-interface Prop {
+interface Props {
   todo: Todo;
 }
 
-const TodoListItem = ({ todo }: Prop) => {
+const TodoListItem = ({ todo }: Props) => {
   const { text, checked } = todo;
 
   return (

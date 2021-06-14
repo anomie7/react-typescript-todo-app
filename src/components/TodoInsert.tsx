@@ -4,11 +4,11 @@ import { FunctionComponent } from 'react';
 import { MdAdd } from 'react-icons/md';
 import './TodoInsert.scss';
 
-interface Prop {
+interface Props {
   onInsert: (text: string) => void;
 }
 
-const TodoInsert: FunctionComponent<Prop> = ({ onInsert }) => {
+const TodoInsert: FunctionComponent<Props> = ({ onInsert }) => {
   const [value, setValue] = useState('');
 
   const onChange = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
