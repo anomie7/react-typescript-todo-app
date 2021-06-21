@@ -6,6 +6,7 @@ import {
 import { Todo } from '../App';
 import cn from 'classnames';
 import './TodoListItem.scss';
+import React from 'react';
 
 interface Props {
   todo: Todo;
@@ -29,4 +30,4 @@ const TodoListItem = ({ todo, onRemove, onToggle }: Props) => {
   );
 };
 
-export default TodoListItem;
+export default React.memo(TodoListItem);
